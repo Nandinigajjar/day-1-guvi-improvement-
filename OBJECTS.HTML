@@ -1,0 +1,41 @@
+Write a blog about objects and its internal representation in Javascript
+
+JavaScript, as a versatile and dynamic programming language, relies heavily on objects for data manipulation and organization. Understanding how objects are internally represented in JavaScript is crucial for writing efficient and effective code. In this blog, we'll delve into the fundamentals of objects and explore their internal representation in JavaScript.
+
+What are Objects in JavaScript?
+In JavaScript, an object is a collection of key-value pairs, where each key is a unique identifier (property) that points to a corresponding value. Objects can encapsulate data and behavior, making them a powerful tool for structuring and organizing code. Here's a simple example of an object in JavaScript:
+
+javascript
+Copy code
+const person = {
+  name: "Nandini",
+  age: 24,
+  occupation: "Software Engineer"
+};
+In this example, person is an object with three properties: name, age, and occupation, each with a corresponding value.
+
+Internal Representation of Objects in JavaScript
+Internally, JavaScript implements objects using various data structures, with the most common being hash tables or dictionaries. These data structures allow for efficient retrieval and manipulation of key-value pairs.
+
+Hash Tables:
+When an object is created in JavaScript, a hash table is typically used to store its properties and values.
+Each property name (key) is hashed to generate an index within the hash table, allowing for fast lookup and retrieval.
+The value associated with each property is stored at the corresponding index in the hash table.
+Hidden Classes and Inline Caching:
+JavaScript engines, such as V8 in Chrome and SpiderMonkey in Firefox, optimize object property access using hidden classes and inline caching.
+Hidden classes are generated internally to track the shape of objects and their properties. Objects with the same shape share the same hidden class.
+Inline caching optimizes property access by caching the property's location based on its hidden class, reducing the overhead of property lookup during subsequent accesses.
+Object Property Access and Mutation
+In JavaScript, properties of an object can be accessed and mutated using dot notation (object.property) or bracket notation (object['property']). Both methods provide flexibility in working with object properties.
+
+javascript
+Copy code
+// Accessing object properties
+console.log(person.name);  // Output: "Nandini"
+console.log(person['age']); // Output: 24
+
+// Mutating object properties
+person.age = 25;
+person['occupation'] = "Senior Software Engineer";
+Conclusion
+Objects are a fundamental part of JavaScript, providing a flexible and powerful mechanism for organizing and manipulating data. Understanding how objects are internally represented, including their use of hash tables, hidden classes, and inline caching, can help developers write more efficient and performant code. By leveraging the capabilities of objects and their internal representation, JavaScript developers can create robust and scalable applications that meet the demands of modern web development.
